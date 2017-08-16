@@ -1,0 +1,23 @@
+<section class="section--home-about spacing--gutter spacing--vert-2 spacing--dsk-vert-5 bg--gray-light max-wrap margin--center margin--bot-5">
+	{% if home.about.small_text %} <h2 class="deco color--orange"><span>{{home.about.small_text}}</span><span>{{home.about.large_text}}</span></h2>{% endif %}
+	<div class="max-content-wrap text--center margin--center">{{home.about.content}}</div>
+	<section class="wrap--before-after flex--wrap justify--around margin--bot-3">
+		{% if home.about.before %}
+			<div class="block--before-after grid--sm-two-fifths">
+				<span class="color--gray-faded font--bold text--vertical before text--uppercase">Before</span>
+				<div class="img-wrap">
+					<img src="{{home.about.before}}" alt="Before Microblading" class="fullimg" />
+				</div>
+			</div>
+		{% endif %}
+		{% if home.about.after %}
+			<div class="block--before-after grid--sm-half">
+				<span class="color--gray-faded font--bold text--vertical after text--uppercase">After</span>
+				<div class="img-wrap">
+					<img src="{{home.about.after}}" alt="After Microblading" class="fullimg" />
+				</div>
+			</div>
+		{% endif %}
+	</section>
+	{% if home.about.button_text_url %}<a class="button margin--center" href="{{home.about.button_text_url}}">{{home.about.button_text}}</a>{% endif %}
+</section>

@@ -42,8 +42,46 @@ function prepareHomePageFields()
         'button_text'     => get_field('field_5994ae596414e'),
         'button_text_url' => get_field('field_5994ae726414f'),
     );
+    $beforeId = get_field('field_5994cb6d1dab5');
+    if ($beforeId != null) {
+        $before = new TimberImage($beforeId);
+    } else {
+        $before = null;
+    }
+    $afterId = get_field('field_5994cb751dab6');
+    if ($afterId != null) {
+        $after = new TimberImage($afterId);
+    } else {
+        $after = null;
+    }
+
+    $about = array(
+        'small_text'      => get_field('field_5994cb581dab2'),
+        'large_text'      => get_field('field_5994cb5b1dab3'),
+        'content'         => get_field('field_5994cb671dab4'),
+        'before'          => $before,
+        'after'           => $after,
+        'button_text'     => get_field('field_5994cbc4d12cc'),
+        'button_text_url' => get_field('field_5994cbc6d12cd'),
+    );
+    $meetId = get_field('field_5994cc43b7aef');
+    if ($meetId != null) {
+        $meetImage = new TimberImage($meetId);
+    } else {
+        $meetImage = null;
+    }
+    $meet = array(
+        'small_text'      => get_field('field_5994cbf7b7aea'),
+        'large_text'      => get_field('field_5994cbfab7aeb'),
+        'content'         => get_field('field_5994cc19b7aec'),
+        'button_text'     => get_field('field_5994cc28b7aee'),
+        'button_text_url' => get_field('field_5994cc27b7aed'),
+        'image'           => $meetImage,
+    );
     $home = array(
         'intro' => $intro,
+        'about' => $about,
+        'meet'  => $meet,
     );
     return $home;
 }

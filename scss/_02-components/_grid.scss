@@ -197,6 +197,16 @@
         }
     }
 
+    .grid--sm-three-fifths {
+        flex-basis: calc(100% / 1.6666666667 - .6em);
+        width: calc(100% / 1.6666666667 - .6em);
+
+        &.nog {
+            flex-basis: calc(100% /  1.6666666667);
+            width: calc(100% /  1.6666666667);
+        }
+    }
+
     .grid--sm-two-fifths {
         flex-basis: calc(100% / 2.5 - .6em);
         width: calc(100% / 2.5 - .6em);

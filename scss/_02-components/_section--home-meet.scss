@@ -1,0 +1,38 @@
+.section--home-meet {
+    position: relative;
+
+    @include media($screen-sm) {
+        min-height: 45vw;
+        overflow: hidden;
+    }
+
+
+    img {
+        @include media($screen-sm) {
+            position: absolute;
+        }
+
+
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .block--content {
+        z-index: 99;
+
+        @include media($screen-sm) {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+
+        @include media($max-sm) {
+            width: 90%;
+            margin: 0 auto;
+            top: -3em;
+            position: relative;
+        }
+    }
+}

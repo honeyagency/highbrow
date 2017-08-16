@@ -17,3 +17,7 @@
 .bg--gray {
     background-color: $gray;
 }
+
+.bg--gray-light {
+    background-color: transparentize($gray, 0.76);
+}
