@@ -1,0 +1,22 @@
+<section class="article-content">
+	{% if post.thumbnail %}
+		<div class="section--article-header img bg--orange color--white text--center spacing--gutter spacing--vert-5">
+			<img src="{{post.thumbnail|resize(1280)}}" alt="{{post.thumbnail.caption}}" class="grid--one" srcset="{{post.thumbnail|resize(640)}}  640w,{{post.thumbnail|resize(750)}}  750w,{{post.thumbnail|resize(1080)}} 1080w,{{post.thumbnail|resize(1280)}} 1280w,{{post.thumbnail|resize(1366)}} 1366w,{{post.thumbnail|resize(1440)}} 1440w,{{post.thumbnail|resize(1920)}} 1920w" sizes="100vw">
+			{% if header.title_location == 'image' %}
+				{% if header.alternative_title != null %}<h1 class="article-h1 mar-no">{{header.alternative_title}}</h1>{% elseif post.title != null %}<h1 class="article-h1 mar-no">{{post.title}}</h1>{% endif %}
+			{% endif %}
+		</div>
+	{% elseif header.title_location != 'inline' %}
+		<div class="section--article-header bg--orange color--white text--center spacing--gutter spacing--vert-5">
+			{% if header.alternative_title != null %}<h1 class="article-h1 mar-no">{{header.alternative_title}}</h1>{% elseif post.title != null %}<h1 class="article-h1 mar-no">{{post.title}}</h1>{% endif %}
+		</div>
+	{% endif %}
+	{% if post.id != 26 %}
+		<div class="section--article-content spacing--gutter content-box spacing--vert-1 spacing--dsk-vert-3 max-content-wrap margin--center">
+			{% if header.title_location == 'inline' %}
+				{% if header.alternative_title != null %}<h1 class="article-h1 mar-no">{{header.alternative_title}}</h1>{% elseif post.title != null %}<h1 class="article-h1 mar-no">{{post.title}}</h1>{% endif %}
+			{% endif %}
+			{{post.content}}
+		</div>
+	{% endif %}
+</section>

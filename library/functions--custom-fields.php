@@ -25,3 +25,25 @@ function prepareOptions()
     );
     return $options;
 }
+function prepareHeaderFields()
+{
+    $header = array(
+        'alternative_title' => get_field('field_5994a4d6a01d8'),
+        'title_location'    => get_field('field_5994a4dca01d9'),
+    );
+    return $header;
+}
+function prepareHomePageFields()
+{
+    $intro = array(
+        'small_text'      => get_field('field_5994ae2f6414c'),
+        'large_text'      => get_field('field_5994aed11cbdf'),
+        'content'         => get_field('field_5994ae4c6414d'),
+        'button_text'     => get_field('field_5994ae596414e'),
+        'button_text_url' => get_field('field_5994ae726414f'),
+    );
+    $home = array(
+        'intro' => $intro,
+    );
+    return $home;
+}

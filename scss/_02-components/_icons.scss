@@ -6,3 +6,33 @@
         width: 100%;
     }
 }
+
+.icon-bug {
+    display: inline-block;
+    width: 25px;
+
+    @include media($screen-xs) {}
+
+
+    @include media($screen-sm) {
+        width: 35px;
+    }
+
+
+    @include media($screen-md) {
+        width: 45px;
+    }
+
+
+    @include media($screen-lg) {
+        width: 60px;
+    }
+
+
+    @include media($screen-xl) {}
+
+
+    svg {
+        width: 100%;
+    }
+}
