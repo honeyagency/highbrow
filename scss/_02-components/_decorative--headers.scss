@@ -1,0 +1,52 @@
+.deco {
+    text-transform: none;
+    line-height: 0.8;
+
+    span {
+        display: block;
+        text-align: center;
+
+        &:first-of-type {
+            font-family: $base-serif-font;
+            font-weight: 100;
+            font-style: italic;
+            line-height: 1;
+            position: relative;
+
+            &:before, &:after {
+                content: "";
+                display: inline-block;
+                border-top: .5px solid;
+                width: 15px;
+                position: relative;
+                transform: translateY(-600%);
+                height: 1px;
+                @include media($screen-xs){}
+                @include media($screen-sm){}
+                @include media($screen-md){
+                	transform:translateY(-1000%);
+                }
+                @include media($screen-lg){}
+                @include media($screen-xl){}
+            }
+
+            &:before {
+                left: -5px;
+            }
+
+            &:after {
+                right: -5px;
+            }
+
+            @include media($screen-sm) {
+                font-size: .9em;
+            }
+        }
+
+        &:nth-of-type(2) {
+            text-transform: uppercase;
+        }
+    }
+
+    font-family: $secondary-serif-font;
+}

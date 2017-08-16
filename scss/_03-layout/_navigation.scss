@@ -1,1 +1,63 @@
-nav {}
+nav {
+    ul {
+        list-style-type: none;
+        margin: 0;
+
+        li {
+            margin-left: 0;
+            display: inline-block;
+
+            &.nav-item {
+                position: relative;
+
+                &:hover {
+                    .nav-drop {
+                        border: 1px solid;
+                        transition: opacity 0.2s $base-cubic, border 0.2s $base-cubic;
+                        opacity: 1;
+                    }
+                }
+
+                &.boxed {
+                    border: 1px solid;
+                    padding: 0.2em 0.5em;
+                }
+            }
+
+            .nav-drop {
+                display: inline-block;
+                position: absolute;
+                text-align: center;
+                top: 2em;
+                display: block;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                overflow: hidden;
+                border: 0;
+                transition: opacity 0.2s $base-cubic, border 0.2s $base-cubic;
+
+                li {
+                    a {
+                        padding: 0.4em 0.6em;
+                        display: block;
+                        transition: color 0.2s $base-cubic;
+                    }
+
+                    transition: background-color 0.2s $base-cubic;
+                    display: block;
+
+                    &:hover {
+                        a {
+                            color: white;
+                            transition: color 0.2s $base-cubic;
+                        }
+
+                        transition: background-color 0.2s $base-cubic;
+                        background-color: map-get($orange, main);
+                    }
+                }
+            }
+        }
+    }
+}

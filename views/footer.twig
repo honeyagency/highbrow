@@ -1,1 +1,15 @@
-Copyright {{"now"|date('Y')}}
+<footer class="bg--blue spacing--gutter flex flex--wrap justify--between spacing--dsk-vert-2">
+	<div class="grid--one text--center  font--serif spacing--vert-2"><span class="color--orange font--larger">{{options.footer.phone.title}} </span><span class="color--white font--larger">{{options.footer.phone.phone}}</span></div>
+	<div class="grid--one grid--sm-third text--center spacing--vert-2">
+		<div class="color--orange text--uppercase font--bold">{{options.footer.contact.title}}</div>
+		<a class="color--white text--uppercase font--bold" href="{{options.footer.contact.link}}">{{options.footer.contact.link_text}}</a>
+	</div>
+	<div class="grid--one grid--sm-third text--center spacing--vert-2">
+		<address class="color--white text--uppercase font--bold">{{options.footer.address}}</address>
+	</div>
+	<div class="grid--one grid--sm-third text--center spacing--vert-2">
+		<div class="color--orange text--uppercase font--bold">{{options.footer.hours.title}}</div>
+		<div class="text--uppercase font--bold color--white">{{options.footer.hours.content}}</div>
+	</div>
+</footer>
+

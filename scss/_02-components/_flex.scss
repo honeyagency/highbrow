@@ -1,0 +1,79 @@
+.flex {
+    display: flex;
+}
+
+.dsk--flex {
+    @include media($screen-sm) {
+        display: flex;
+    }
+}
+
+.flex--wrap {
+    flex-wrap: wrap;
+}
+
+.justify--between {
+    justify-content: space-between;
+}
+
+.justify--around {
+    justify-content: space-around;
+}
+
+.justify--end {
+    justify-content: flex-end;
+}
+
+.justify--center {
+    justify-content: center;
+}
+
+.align--items-center {
+    align-items: center;
+}
+
+// 
+// Grid
+//
+
+.max-wrap {
+    max-width: $max-wrap;
+}
+
+.max-content-wrap {
+    max-width: $max-content-wrap;
+}
+
+.margin--center {
+    margin: 0 auto;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.content-box {
+    box-sizing: content-box;
+}
+
+.vertical--center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hidden--mob {
+    @include media($max-sm) {
+        display: none !important;
+    }
+}
+
+.hidden--dsk {
+    @include media($screen-sm) {
+        display: none !important;
+    }
+}
