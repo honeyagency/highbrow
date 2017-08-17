@@ -32,16 +32,21 @@
 	padding-bottom: 6em;
 }
 .spacing--gutter{
-
 	padding-right: 1em;
 	padding-left:1em;
-
 	@include media($screen-md) {
 		padding-left:4em;
 		padding-right:4em;
-	}
-	
+	}	
 }
+.spacing--gutter-mob{
+	
+	@include media($max-sm) {
+		padding-right: 1em;
+		padding-left:1em;
+	}	
+}
+
 .spacing--gutter-dsk{
 
 	@include media($screen-md) {

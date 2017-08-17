@@ -1,7 +1,13 @@
 body {
     font-family: $base-sans-font;
     line-height: $base-line-height;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+
+    @include media($screen-sm) {
+        font-size: 1.2rem;
+    }
+
+
     color: $base-font-color;
     -webkit-font-smoothing: antialiased;
     font-weight: 400;
@@ -42,7 +48,7 @@ h1 {
     text-transform: uppercase;
     font-style: italic;
     font-weight: 400;
-    font-size: $h1 * 0.9;
+    font-size: 2rem;
     line-height: 1.1;
     margin-bottom: 0.2em;
 }

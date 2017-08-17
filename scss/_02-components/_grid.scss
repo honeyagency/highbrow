@@ -295,6 +295,16 @@
         }
     }
 
+    .grid--md-two-fifths {
+        flex-basis: calc(100% / 2.5 - .6em);
+        width: calc(100% / 2.5 - .6em);
+
+        &.nog {
+            flex-basis: calc(100% /  2.5);
+            width: calc(100% /  2.5);
+        }
+    }
+
     .grid--md-third {
         flex-basis: calc(100% / 3 - .6666666em);
         width: calc(100% / 3 - .6666666em);

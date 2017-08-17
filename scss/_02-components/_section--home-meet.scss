@@ -2,8 +2,13 @@
     position: relative;
 
     @include media($screen-sm) {
-        min-height: 45vw;
+        min-height: 50vw;
         overflow: hidden;
+    }
+
+
+    @include media($screen-md) {
+        min-height: 45vw;
     }
 
 
@@ -19,10 +24,20 @@
     }
 
     .block--content {
+        position: relative;
         z-index: 99;
 
         @include media($screen-sm) {
             position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+
+        @include media($screen-md) {
+            left: auto;
+            bottom: auto;
             top: 50%;
             transform: translateY(-50%);
         }
@@ -32,7 +47,10 @@
             width: 90%;
             margin: 0 auto;
             top: -3em;
-            position: relative;
         }
+    }
+
+    @include media($max-sm) {
+        background-color: transparentize($gray, 0.76);
     }
 }

@@ -1,7 +1,14 @@
 .deco {
     text-transform: none;
     line-height: 0.8;
-    font-size: 2.3rem;
+    font-size: 1.8rem;
+
+    @include media($screen-xs) {}
+
+    @include media($screen-sm) {
+        font-size: 2.3rem;
+    }
+
 
     span {
         display: block;
@@ -25,7 +32,9 @@
 
                 @include media($screen-xs) {}
 
+
                 @include media($screen-sm) {}
+
 
                 @include media($screen-md) {
                     transform: translateY(-1000%);
@@ -33,6 +42,7 @@
 
 
                 @include media($screen-lg) {}
+
 
                 @include media($screen-xl) {}
             }

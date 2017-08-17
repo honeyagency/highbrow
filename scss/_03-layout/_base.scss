@@ -13,7 +13,14 @@
             }
 
             h1 {
-                position: relative;
+                position: absolute;
+@include media($screen-xs){}
+@include media($screen-sm){
+    position: relative;
+}
+@include media($screen-md){}
+@include media($screen-lg){}
+@include media($screen-xl){}
                 z-index: 3;
                 top: 50%;
                 transform: translateY(-50%);

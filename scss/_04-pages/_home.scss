@@ -2,8 +2,14 @@
     .article-h1 {
         text-align: left;
         display: inline-block;
-        left: 40%;
-        position: relative;
-        transform: translateY(-50%) translateX(-50%) !important;
+        position: absolute;
+        left: 50%;
+        transform: translateY(-50%);
+
+        @include media($screen-sm) {
+            position: relative;
+            left: 40%;
+            transform: translateY(-50%) translateX(-50%) !important;
+        }
     }
 }

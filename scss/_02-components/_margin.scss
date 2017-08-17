@@ -29,6 +29,35 @@
 .margin--top-5 {margin-top:(5 * $h5);}
 .margin--top-6 {margin-top:(6 * $h6);}
 
+.margin--dsk-bot-1 {@include media( $screen-sm){margin-bottom:(1 * $h1);}}
+.margin--dsk-bot-2 {@include media( $screen-sm){margin-bottom:(2 * $h2);}}
+.margin--dsk-bot-3 {@include media( $screen-sm){margin-bottom:(3 * $h3);}}
+.margin--dsk-bot-4 {@include media( $screen-sm){margin-bottom:(4 * $h4);}}
+.margin--dsk-bot-5 {@include media( $screen-sm){margin-bottom:(5 * $h5);}}
+.margin--dsk-bot-6 {@include media( $screen-sm){margin-bottom:(6 * $h6);}}
+
+.margin--dsk-top-1 {@include media( $screen-sm){margin-top:(1 * $h1);}}
+.margin--dsk-top-2 {@include media( $screen-sm){margin-top:(2 * $h2);}}
+.margin--dsk-top-3 {@include media( $screen-sm){margin-top:(3 * $h3);}}
+.margin--dsk-top-4 {@include media( $screen-sm){margin-top:(4 * $h4);}}
+.margin--dsk-top-5 {@include media( $screen-sm){margin-top:(5 * $h5);}}
+.margin--dsk-top-6 {@include media( $screen-sm){margin-top:(6 * $h6);}}
+
+
+.margin--md-bot-1 {@include media( $screen-md){margin-bottom:(1 * $h1);}}
+.margin--md-bot-2 {@include media( $screen-md){margin-bottom:(2 * $h2);}}
+.margin--md-bot-3 {@include media( $screen-md){margin-bottom:(3 * $h3);}}
+.margin--md-bot-4 {@include media( $screen-md){margin-bottom:(4 * $h4);}}
+.margin--md-bot-5 {@include media( $screen-md){margin-bottom:(5 * $h5);}}
+.margin--md-bot-6 {@include media( $screen-md){margin-bottom:(6 * $h6);}}
+
+.margin--md-top-1 {@include media( $screen-md){margin-top:(1 * $h1);}}
+.margin--md-top-2 {@include media( $screen-md){margin-top:(2 * $h2);}}
+.margin--md-top-3 {@include media( $screen-md){margin-top:(3 * $h3);}}
+.margin--md-top-4 {@include media( $screen-md){margin-top:(4 * $h4);}}
+.margin--md-top-5 {@include media( $screen-md){margin-top:(5 * $h5);}}
+.margin--md-top-6 {@include media( $screen-md){margin-top:(6 * $h6);}}
+
 
 .margin--dsk-vert-0 {@include media( $screen-sm ){margin-top:(0);margin-bottom:(0);};}
 .margin--dsk-vert-1 {@include media( $screen-sm ){margin-top:(1 * $h1);margin-bottom:(1 * $h1);};}
