@@ -3,6 +3,7 @@
   '_07-vendors/neat/neat';
 
 @import
+  '_06-utils/borders',
   '_06-utils/color-palette',
   '_06-utils/variables',
   '_06-utils/mixins';
@@ -35,6 +36,7 @@
   '_02-components/margin',
   '_02-components/section--home-about',
   '_02-components/section--home-meet',
+  '_02-components/section--services',
   '_02-components/spacing';
 
 @import

@@ -21,11 +21,13 @@
  * @since    Timber 0.1
  */
 
-$context = Timber::get_context();
-$post = new TimberPost();
-$context['post'] = $post;
+$context           = Timber::get_context();
+$post              = new TimberPost();
+$context['post']   = $post;
 $context['header'] = prepareHeaderFields();
 if (is_front_page() == true) {
-	$context['home'] = prepareHomePageFields();
+    $context['home'] = prepareHomePageFields();
+} elseif (is_page(10)) {
+    $context['services'] = prepareServices();
 }
-Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );
+Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

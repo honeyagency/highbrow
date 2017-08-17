@@ -85,3 +85,36 @@ function prepareHomePageFields()
     );
     return $home;
 }
+
+function prepareServices()
+{
+
+    // Get the service repeater (about three of these)
+    if (have_rows('field_5995d29ce8345')) {
+        $services = array();
+        while (have_rows('field_5995d29ce8345')) {
+            the_row();
+            if (have_rows('field_5995d2afdfd57')) {
+                $steps = array();
+                while (have_rows('field_5995d2afdfd57')) {
+                    the_row();
+                    $steps[] = array(
+                        'title'               => get_sub_field('field_5995d2bbdfd58'),
+                        'icon_class'          => get_sub_field('field_5995d2cddfd59'),
+                        'description_title'   => get_sub_field('field_5995d31adfd5a'),
+                        'description_content' => get_sub_field('field_5995d337dfd5b'),
+                    );
+                }
+            }
+
+            $services[] = array(
+                'small_title' => get_sub_field('field_5995d3574e497'),
+                'large_title' => get_sub_field('field_5995d3664e498'),
+                'description' => get_sub_field('field_5995d36f4e499'),
+                'steps'       => $steps,
+            );
+        }
+    }
+    return $services;
+
+}

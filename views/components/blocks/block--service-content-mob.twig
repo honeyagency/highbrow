@@ -1,0 +1,13 @@
+<div class="block--service-content spacing--dsk-vert-2 hidden--dsk" id="service-{{loop.index}}">
+	<div class="block--step-icons flex--wrap justify--between spacing--gutter-mob">
+		{% for step in service.steps %}
+			<div class="{% if loop.first %}active {% endif %}step--title grid--sm-sixth text--center" id="step-{{loop.index}}">
+			<i class="{{step.icon_class}}" data-grunticon-embed></i>
+			<p class="text--uppercase font--semi-bold font--even-smaller no-mar">{{step.title}}</p>
+		</div>
+		<div class=" spacing--vert-2 hidden--dsk">
+			<h4 class="text--uppercase font--bold">{{step.description_title}}</h4>
+			{{step.description_content}}
+		</div>
+	{% endfor %}
+</div>

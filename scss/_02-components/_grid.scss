@@ -73,6 +73,16 @@
     }
 }
 
+.grid--sixth {
+    flex-basis: calc(100% / 6 - .8em);
+    width: calc(100% / 6 - .8em);
+
+    &.nog {
+        flex-basis: calc(100% / 6);
+        width: calc(100% / 6);
+    }
+}
+
 @include media($screen-xs) {
     .grid--xs-one {
         flex-basis: 100%;
@@ -146,6 +156,16 @@
         &.nog {
             flex-basis: calc(100% / 5);
             width: calc(100% / 5);
+        }
+    }
+
+    .grid--xs-sixth {
+        flex-basis: calc(100% / 6 - .8em);
+        width: calc(100% / 6 - .8em);
+
+        &.nog {
+            flex-basis: calc(100% / 6);
+            width: calc(100% / 6);
         }
     }
 }
@@ -246,6 +266,16 @@
             width: calc(100% / 5);
         }
     }
+
+    .grid--sm-sixth {
+        flex-basis: calc(100% / 6 - .8em);
+        width: calc(100% / 6 - .8em);
+
+        &.nog {
+            flex-basis: calc(100% / 6);
+            width: calc(100% / 6);
+        }
+    }
 }
 
 
@@ -334,6 +364,16 @@
             width: calc(100% / 5);
         }
     }
+
+    .grid---md-sixth {
+        flex-basis: calc(100% / 6 - .8em);
+        width: calc(100% / 6 - .8em);
+
+        &.nog {
+            flex-basis: calc(100% / 6);
+            width: calc(100% / 6);
+        }
+    }
 }
 
 
@@ -420,6 +460,16 @@
         &.nog {
             flex-basis: calc(100% / 5);
             width: calc(100% / 5);
+        }
+    }
+
+    .grid--lg-sixth {
+        flex-basis: calc(100% / 6 - .8em);
+        width: calc(100% / 6 - .8em);
+
+        &.nog {
+            flex-basis: calc(100% / 6);
+            width: calc(100% / 6);
         }
     }
 }

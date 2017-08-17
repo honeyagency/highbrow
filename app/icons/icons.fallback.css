@@ -2,3 +2,13 @@
 
 .icon-logo { background-image: url('app/icons/logo.png'); background-repeat: no-repeat; }
 
+.icon-service--arrow { background-image: url('app/icons/service--arrow.png'); background-repeat: no-repeat; }
+
+.icon-service--check { background-image: url('app/icons/service--check.png'); background-repeat: no-repeat; }
+
+.icon-service--dollar { background-image: url('app/icons/service--dollar.png'); background-repeat: no-repeat; }
+
+.icon-service--info { background-image: url('app/icons/service--info.png'); background-repeat: no-repeat; }
+
+.icon-service--question { background-image: url('app/icons/service--question.png'); background-repeat: no-repeat; }
+

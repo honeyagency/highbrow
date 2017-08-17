@@ -1,0 +1,10 @@
+<section class="section--services dsk--flex flex--wrap justify--between spacing--gutter max-wrap margin--center spacing--vert-2 spacing--dsk-vert-5">
+	{% for service in services %}
+		{% include 'components/blocks/block--service.twig' %}
+	{% endfor %}
+	<div class="grid--one dsk--flex flex--wrap">
+		{% for service in services %}
+			{% include 'components/blocks/block--service-content.twig' %}
+		{% endfor %}
+	</div>
+</section>
