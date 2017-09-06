@@ -23,41 +23,60 @@ jQuery(document).ready(function($) {
             $(this).parent().parent().find('.block--step-content#' + $id).slideToggle('fast').toggleClass('expanded');
         }
     });
-    $('.trigger--service-dsk').on('click touchstart', function(event) {
-        event.preventDefault();
-        $id = $(this).attr('id');
+
+    function toggleServiceDsk(e) {
+        $id = e.attr('id');
         $more = 'Read More';
         $less = 'Read Less';
-        if ($(this).hasClass('active')) {
-            $(this).parent().parent().find('.block--service-content.expanded').slideUp('fast').removeClass('expanded');
-            $(this).parent('.block--service.active').toggleClass('active');
-            $(this).toggleClass('active');
-            $(this).text($more);
+        if (e.hasClass('active')) {
+            e.parent().parent().find('.block--service-content.expanded').slideUp('fast').removeClass('expanded');
+            e.parent('.block--service.active').toggleClass('active');
+            e.toggleClass('active');
+            e.text($more);
         } else {
             $('.trigger--service-dsk').removeClass('active').text($more);;
             $('.block--service').removeClass('active');
-            $(this).toggleClass('active');
-            $(this).parent('.block--service').toggleClass('active');
-            $(this).parent().parent().find('.block--service-content.expanded').slideUp('fast').removeClass('expanded');
-            $(this).parent().parent().find('.block--service-content#' + $id).slideToggle('fast').toggleClass('expanded');
-            $(this).text($less);
+            e.toggleClass('active');
+            e.parent('.block--service').toggleClass('active');
+            e.parent().parent().find('.block--service-content.expanded').slideUp('fast').removeClass('expanded');
+            e.parent().parent().find('.block--service-content#' + $id).slideToggle('fast').toggleClass('expanded');
+            e.text($less);
         }
-    });
-    $('.trigger--service-mob').on('click touchstart', function(event) {
+    }
+    $('.trigger--service-dsk').on('click touchstart', function(event) {
         event.preventDefault();
-        $id = $(this).attr('id');
+        e = $(this);
+        toggleServiceDsk(e);
+    });
+
+    function toggleServiceMob(e) {
+        $id = e.attr('id');
         $more = 'Read More';
         $less = 'Read Less';
-        if ($(this).hasClass('active')) {
-            $(this).parent().parent().find('.block--service-steps-mob.expanded').slideUp('fast').removeClass('expanded');
-            $(this).toggleClass('active');
-            $(this).text($more);
+        if (e.hasClass('active')) {
+            e.parent().parent().find('.block--service-steps-mob.expanded').slideUp('fast').removeClass('expanded');
+            e.toggleClass('active');
+            e.text($more);
         } else {
             $('.trigger--service-mob').removeClass('active').text($more);
-            $(this).toggleClass('active');
-            $(this).parent().parent().find('.block--service-steps-mob.expanded').slideUp('fast').removeClass('expanded');
-            $(this).parent().find('.block--service-steps-mob#' + $id).slideToggle('fast').toggleClass('expanded');
-            $(this).text($less);
+            e.toggleClass('active');
+            e.parent().parent().find('.block--service-steps-mob.expanded').slideUp('fast').removeClass('expanded');
+            e.parent().find('.block--service-steps-mob#' + $id).slideToggle('fast').toggleClass('expanded');
+            e.text($less);
         }
+    }
+    $('.trigger--service-mob').on('click touchstart', function(event) {
+        event.preventDefault();
+        e = $(this);
+        toggleServiceMob(e);
     });
+    if ($('.section--services').is('[data-active]')) {
+        $data = $('.section--services').attr('data-active');
+        e = $(this).find('[data-name="' + $data + '"]').find('a');
+        if ($(".hidden--mob").css("display") == "none") {
+            toggleServiceMob(e);
+        } else {
+            toggleServiceDsk(e);
+        }
+    }
 });

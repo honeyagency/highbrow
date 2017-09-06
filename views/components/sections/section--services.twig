@@ -1,4 +1,4 @@
-<section class="section--services dsk--flex flex--wrap justify--between spacing--gutter max-wrap margin--center spacing--vert-2 spacing--dsk-vert-5">
+<section class="section--services dsk--flex flex--wrap justify--between spacing--gutter max-wrap margin--center spacing--vert-2 spacing--dsk-vert-5" {% if current %}data-active="{{current}}"{% endif %}>
 	{% for service in services %}
 		{% include 'components/blocks/block--service.twig' %}
 	{% endfor %}

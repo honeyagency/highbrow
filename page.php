@@ -29,6 +29,11 @@ if (is_front_page() == true) {
     $context['home'] = prepareHomePageFields();
 } elseif (is_page(10)) {
     $context['services'] = prepareServices();
+    if (!empty($_GET["service"])) {
+        $context['current'] = $_GET["service"];
+    } else {
+        $context['current'] = null;
+    }
 } elseif (is_page(12)) {
     $context['meet'] = prepareMeetKristene();
 } elseif (is_page(14)) {
