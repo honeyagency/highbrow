@@ -1,0 +1,7 @@
+<section class="section--meet-gallery flex justify--between spacing--gutter spacing--vert-2">
+	{% for image in meet.gallery %}
+		<a href="{{image}}" target="_blank" class="grid--one grid--sm-half imagelink" >
+			<img data-original="{{image|resize(1256,836)}}" />
+		</a>
+	{% endfor %}
+</section>

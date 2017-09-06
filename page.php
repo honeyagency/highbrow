@@ -29,5 +29,7 @@ if (is_front_page() == true) {
     $context['home'] = prepareHomePageFields();
 } elseif (is_page(10)) {
     $context['services'] = prepareServices();
+} elseif (is_page(12)) {
+    $context['meet'] = prepareMeetKristene();
 }
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

@@ -118,3 +118,30 @@ function prepareServices()
     return $services;
 
 }
+
+function prepareMeetKristene()
+{
+    $intro = array(
+        'small_text'      => get_field('field_59b0664a6c206'),
+        'large_text'      => get_field('field_59b0664a6c212'),
+        'content'         => get_field('field_59b0664a6c21d'),
+        'button_text'     => get_field('field_59b0664a6c228'),
+        'button_text_url' => get_field('field_59b0664a6c232'),
+    );
+
+    $meetGallery = get_field('field_59b067c6b46cf');
+
+    if (!empty($meetGallery)) {
+        foreach ($meetGallery as $image) {
+            $gallery[] = new TimberImage($image['id']);
+        }
+    } else {
+        $gallery = null;
+    }
+    $meet = array(
+        'intro'   => $intro,
+        'gallery' => $gallery,
+    );
+
+    return $meet;
+}
