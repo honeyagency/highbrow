@@ -145,3 +145,45 @@ function prepareMeetKristene()
 
     return $meet;
 }
+
+function preparePortfolio()
+{
+    $intro = array(
+        'small_text'      => get_field('field_59b06fe3afa0a'),
+        'large_text'      => get_field('field_59b06fe3afa14'),
+        'content'         => get_field('field_59b06fe3afa1e'),
+        'button_text'     => get_field('field_59b06fe3afa29'),
+        'button_text_url' => get_field('field_59b06fe3afa35'),
+    );
+
+    if (have_rows('field_59b071da818ef')) {
+        $images = array();
+        while (have_rows('field_59b071da818ef')) {
+            the_row();
+            $beforeId = get_sub_field('field_59b071e4818f0');
+            if (!empty($beforeId)) {
+                $beforeImage = new TimberImage($beforeId);
+            } else {
+                $beforeImage = null;
+            }
+            $afterId = get_sub_field('field_59b071f5818f1');
+            if (!empty($afterId)) {
+                $afterImage = new TimberImage($afterId);
+            } else {
+                $afterImage = null;
+            }
+            $images[] = array(
+                'before' => $beforeImage,
+                'after'  => $afterImage,
+            );
+        }
+    }
+
+    $portfolio = array(
+        'intro'  => $intro,
+        'images' => $images,
+
+    );
+
+    return $portfolio;
+}

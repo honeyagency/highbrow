@@ -31,5 +31,8 @@ if (is_front_page() == true) {
     $context['services'] = prepareServices();
 } elseif (is_page(12)) {
     $context['meet'] = prepareMeetKristene();
+} elseif (is_page(14)) {
+    $context['portfolio'] = preparePortfolio();
 }
+
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

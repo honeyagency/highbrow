@@ -1,0 +1,22 @@
+<section class="section--portfolio-before-after spacing--gutter">
+	{% for images in portfolio.images %}
+		<div class="wrap--before-after flex flex--wrap justify--between spacing--vert-2 spacing--dsk-vert-3">
+			{% if images.before %}
+				<div class="block--before-after grid--sm-two-fifths">
+					<span class="color--gray-faded font--bold text--vertical before text--uppercase">Before</span>
+					<div class="img-wrap">
+						<img src="{{images.before}}" alt="Before Microblading" class="fullimg" />
+					</div>
+				</div>
+			{% endif %}
+			{% if images.after %}
+				<div class="block--before-after grid--sm-half">
+					<span class="color--gray-faded font--bold text--vertical after text--uppercase">After</span>
+					<div class="img-wrap">
+						<img src="{{images.after}}" alt="After Microblading" class="fullimg" />
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	{% endfor %}
+</section>

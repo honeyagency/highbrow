@@ -1,0 +1,9 @@
+.section--portfolio-before-after {
+    .wrap--before-after {
+        border-bottom: 2px solid $gray;
+
+        &:last-of-type {
+            border-bottom: none !important;
+        }
+    }
+}
