@@ -1,7 +1,7 @@
 <div class="block--service border--1 grid--sm-third spacing--horiz-2 spacing--gutter-mob text--center spacing--vert-3" data-name="{{service.small_title|lower}}-{{service.large_title|lower}}">
 	{% if service.small_title %} <h2 class="deco color--orange"><span>{{service.small_title}}</span><span>{{service.large_title}}</span></h2>{% endif %}
 	<p>{{service.description}}</p>
-	<a href="" class="trigger--service-dsk button margin--center hidden--mob" id="service-{{loop.index}}">Read More</a>
-	<a href="" class="trigger--service-mob button margin--center hidden--dsk" id="service-{{loop.index}}">Read More</a>
+	<a href="" class="trigger--service-dsk button bg--blue margin--center hidden--mob" id="service-{{loop.index}}">Read More</a>
+	<a href="" class="trigger--service-mob button bg--blue margin--center hidden--dsk" id="service-{{loop.index}}">Read More</a>
 	{% include 'components/blocks/block--service-steps-mob.twig' %}
 </div>

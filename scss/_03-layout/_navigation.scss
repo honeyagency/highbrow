@@ -18,9 +18,46 @@ nav {
                     }
                 }
 
+                &.current_page_item {
+                    a {
+                        color: map-get($blue, main);
+                        border-bottom: 2px solid;
+                    }
+                }
+
+                a {
+                    transition: color 0.2s $base-cubic, border 0.2s $base-cubic;
+                }
+
+                &:hover {
+                    a {
+                        transition: color 0.2s $base-cubic, border 0.2s $base-cubic;
+                        color: map-get($blue, faded);
+                        border-bottom: 1px solid;
+                    }
+                }
+
                 &.boxed {
                     border: 1px solid;
                     padding: 0.2em 0.5em;
+                    background-color: transparent;
+                    transition: background-color 0.2s $base-cubic, border-color 0.2s $base-cubic;
+
+                    a {
+                        transition: color 0.2s $base-cubic;
+                    }
+
+                    &:hover, &.current_page_item {
+                        transition: background-color 0.2s $base-cubic, border-color 0.2s $base-cubic;
+                        background-color: transparentize(map-get($blue, faded), 0.7);
+                        border-color: transparent;
+
+                        a {
+                            transition: color 0.2s $base-cubic;
+                            color: white;
+                            border: none;
+                        }
+                    }
                 }
             }
 
@@ -60,5 +97,4 @@ nav {
             }
         }
     }
-
 }

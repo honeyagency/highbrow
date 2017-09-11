@@ -10,4 +10,13 @@
     text-decoration: none;
     text-transform: uppercase;
     display: table;
+    transition: background-color 0.2s $base-cubic;
+
+    &:hover {
+        transition: background-color 0.2s $base-cubic;
+
+        &.bg--blue {
+            background-color: transparentize(map-get($blue, main), 0.1);
+        }
+    }
 }
