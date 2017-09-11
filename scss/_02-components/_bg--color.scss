@@ -21,3 +21,7 @@
 .bg--gray-light {
     background-color: transparentize($gray, 0.76);
 }
+
+.bg--footergray {
+    background-color: $footergray;
+}

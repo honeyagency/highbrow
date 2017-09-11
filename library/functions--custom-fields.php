@@ -15,13 +15,22 @@ function prepareOptions()
         'content' => get_field('field_59949d07628df', 'options'),
     );
     $footer = array(
-        'phone'   => $phone,
-        'contact' => $contact,
-        'address' => get_field('field_59949ce73de48', 'options'),
-        'hours'   => $hours,
+        'email_signup_text'      => get_field('field_59b6da32876fa', 'options'),
+        'email_signup_embed'     => get_field('field_59b6da31876f9', 'options'),
+        'instagram_section_text' => get_field('field_59b6da5e876fb', 'options'),
+        'phone'                  => $phone,
+        'contact'                => $contact,
+        'address'                => get_field('field_59949ce73de48', 'options'),
+        'hours'                  => $hours,
+    );
+    $social = array(
+        'yelp'      => get_field('field_59b6d4ca7241e', 'options'),
+        'facebook'  => get_field('field_59b6d4ce7241f', 'options'),
+        'instagram' => get_field('field_59b6d4d672420', 'options'),
     );
     $options = array(
         'footer' => $footer,
+        'social' => $social,
     );
     return $options;
 }
@@ -208,7 +217,7 @@ function prepareAppointmentsPage()
         }
     }
     $appointments = array(
-        'intro'     => $intro,
+        'intro'   => $intro,
         'content' => $content,
 
     );

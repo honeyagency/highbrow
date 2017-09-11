@@ -1,15 +1,29 @@
-<footer class="bg--blue spacing--gutter flex flex--wrap justify--between spacing--dsk-vert-2">
-	<div class="grid--one text--center  font--serif spacing--vert-2"><span class="color--orange font--larger">{{options.footer.phone.title}} </span><span class="color--white font--larger">{{options.footer.phone.phone}}</span></div>
-	<div class="grid--one grid--sm-third text--center spacing--vert-2">
-		<div class="color--orange text--uppercase font--bold">{{options.footer.contact.title}}</div>
-		<a class="color--white text--uppercase font--bold" href="{{options.footer.contact.link}}">{{options.footer.contact.link_text}}</a>
-	</div>
-	<div class="grid--one grid--sm-third text--center spacing--vert-2">
+<footer class="">
+	<section class="section--pre-footer bg--footergray spacing--gutter spacing--dsk-vert-2 flex flex--wrap">
+		<div class="grid--one">
+			<div class="block--email-signup flex flex--wrap grid--one grid--sm-two-thirds align--items-center">
+				<span class="text--uppercase font--bold font--smaller">{{options.footer.email_signup_text}}</span>
+				{{options.footer.email_signup_embed}}
+			</div>
+			{% include 'components/blocks/block--social-footer.twig' %}
+			<div class="clear">
+				
+			</div>
+		</div>
+	</section>
+	<section class="spacing--gutter bg--blue flex flex--wrap justify--between spacing--dsk-vert-2">
+		
+		<div class="grid--one text--center  font--serif spacing--vert-2"><span class="color--orange font--larger">{{options.footer.phone.title}} </span><span class="color--white font--larger">{{options.footer.phone.phone}}</span></div>
+		<div class="grid--one grid--sm-third text--center spacing--vert-2">
+			<div class="color--orange text--uppercase font--bold">{{options.footer.contact.title}}</div>
+			<a class="color--white text--uppercase font--bold" href="{{options.footer.contact.link}}">{{options.footer.contact.link_text}}</a>
+		</div>
+		<div class="grid--one grid--sm-third text--center spacing--vert-2">
 		<address class="color--white text--uppercase font--bold">{{options.footer.address}}</address>
 	</div>
 	<div class="grid--one grid--sm-third text--center spacing--vert-2">
 		<div class="color--orange text--uppercase font--bold">{{options.footer.hours.title}}</div>
 		<div class="text--uppercase font--bold color--white">{{options.footer.hours.content}}</div>
 	</div>
+</section>
 </footer>
-

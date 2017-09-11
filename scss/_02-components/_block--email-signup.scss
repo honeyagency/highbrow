@@ -1,0 +1,41 @@
+.block--email-signup {
+    @include media($screen-sm) {
+        float: left;
+    }
+
+
+    #mc_embed_signup_scroll {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    input[type="email"] {
+        font-size: 0.9em;
+        padding: 0.5em 0.8em;
+
+        @include media($screen-sm) {
+            margin: 0 2em;
+            min-width: 290px;
+        }
+    }
+
+    .clear {
+        position: relative;
+    }
+
+    input[type="submit"] {
+        -webkit-appearance: none;
+        appearance: none;
+        color: map-get($orange, main);
+        background: transparent;
+        border: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.8em;
+        top: 50%;
+        position: absolute;
+        transform: translateY(-50%);
+        padding: 0;
+        margin: 0;
+    }
+}

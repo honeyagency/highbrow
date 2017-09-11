@@ -1,4 +1,11 @@
 nav {
+    @include media($screen-sm) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
     ul {
         list-style-type: none;
         margin: 0;
