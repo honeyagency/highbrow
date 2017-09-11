@@ -1,7 +1,7 @@
 <nav role="navigation" class="bg--white">
 	<ul>
 		{% for item in menu.get_items %}
-			<li class="nav-item {{item.classes | join(' ')}} spacing--horiz-1">
+			<li class="nav-item {{item.classes | join(' ')}} spacing--horiz-half spacing--md-horiz-1">
 				<a class="nav-link text--uppercase font--bold color--font font--smaller" href="{{item.get_link}}">{{item.title}}</a>
 				{% if item.get_children %}
 					<ul class="nav nav-drop">

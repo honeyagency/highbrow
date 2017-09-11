@@ -3,6 +3,9 @@ nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        // width: calc(100vw - 8em - 145px);
+        // flex-basis: calc(100% - 8em - 145px);
     }
 
 
@@ -12,7 +15,7 @@ nav {
 
         li {
             margin-left: 0;
-            display: inline-block;
+            display: inline;
 
             &.nav-item {
                 position: relative;
@@ -64,6 +67,17 @@ nav {
                             color: white;
                             border: none;
                         }
+                    }
+                }
+
+                @include media($max-lg) {
+                    font-size: .75em;
+                }
+
+
+                @include media($max-md) {
+                    a {
+                        font-size: .75em;
                     }
                 }
             }
