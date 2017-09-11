@@ -1,0 +1,8 @@
+<section class="section--appointments-content spacing--gutter spacing--vert-1 spacing--dsk-vert-3 max-wrap margin--center">
+	{% for content in apts.content %}
+		<div class="block--appointments-content spacing--vert-2">
+			<h4 class="text--uppercase font--bold" id="{{content.title}}">{{content.title}}</h4>
+			<div class="column--2">{{content.content}}</div>
+		</div>
+	{% endfor %}
+</section>

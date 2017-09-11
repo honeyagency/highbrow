@@ -187,3 +187,31 @@ function preparePortfolio()
 
     return $portfolio;
 }
+function prepareAppointmentsPage()
+{
+    $intro = array(
+        'small_text'      => get_field('field_59b6ca19e5d46'),
+        'large_text'      => get_field('field_59b6ca19e5d51'),
+        'content'         => get_field('field_59b6ca19e5d5b'),
+        'button_text'     => get_field('field_59b6ca19e5d65'),
+        'button_text_url' => get_field('field_59b6ca19e5d6f'),
+    );
+
+    if (have_rows('field_59b6ca3da3f2a')) {
+        $content = array();
+        while (have_rows('field_59b6ca3da3f2a')) {
+            the_row();
+            $content[] = array(
+                'title'   => get_sub_field('field_59b6caaea3f2b'),
+                'content' => get_sub_field('field_59b6cabca3f2c'),
+            );
+        }
+    }
+    $appointments = array(
+        'intro'     => $intro,
+        'content' => $content,
+
+    );
+
+    return $appointments;
+}
