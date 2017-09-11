@@ -2,8 +2,8 @@
 	<span class="title color--gray-faded font--bold before text--uppercase">{{options.footer.instagram_section_text}}</span>
 	{% for image in instagram %}
 		{% if loop.index < 6 %}
-		<a href="{{image.link}}" title="{{image.caption}}" target="_blank" class="grid--half">
-			<img src="{{image.images.low_resolution.url}}" alt="{{image.caption}}">
+		<a href="{{image.link}}" title="{{image.caption.text}}" target="_blank" class="grid--half">
+			<img src="{{image.images.low_resolution.url}}" alt="{{image.caption.text}}">
 		</a>
 	{% endif %}
 	{% endfor %}
