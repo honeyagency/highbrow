@@ -78,5 +78,9 @@ jQuery(document).ready(function($) {
         } else {
             toggleServiceDsk(e);
         }
+
+        $('html, body').animate({
+            scrollTop: $(".section--services").offset().top
+        }, 400);
     }
 });

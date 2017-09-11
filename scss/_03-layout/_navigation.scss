@@ -25,7 +25,7 @@ nav {
                     }
                 }
 
-                &.current_page_item {
+                &.current-menu-item {
                     a {
                         color: map-get($blue, main);
                         border-bottom: 2px solid;
