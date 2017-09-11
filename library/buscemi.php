@@ -77,6 +77,9 @@ function cc_mime_types($mimes)
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+// load a list of recent images from instagram
+require_once 'instagram.php';
+
 // Setting up ACF options page
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page();
@@ -84,3 +87,4 @@ if (function_exists('acf_add_options_page')) {
 
 require_once 'functions--custom-fields.php';
 require_once 'functions--custom-posts.php';
+

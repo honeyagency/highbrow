@@ -37,10 +37,11 @@ class StarterSite extends TimberSite
 
     public function add_to_context($context)
     {
-        $context['menu']    = new TimberMenu();
-        $context['site']    = $this;
-        $context['assets']  = get_template_directory_uri() . '/app';
-        $context['options'] = prepareOptions();
+        $context['menu']      = new TimberMenu();
+        $context['site']      = $this;
+        $context['assets']    = get_template_directory_uri() . '/app';
+        $context['options']   = prepareOptions();
+     
         return $context;
     }
 

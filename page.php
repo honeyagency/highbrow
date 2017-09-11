@@ -41,5 +41,6 @@ if (is_front_page() == true) {
 } elseif (is_page(16)) {
     $context['apts'] = prepareAppointmentsPage();
 }
+   $context['instagram'] = $instagramCachedResults;
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

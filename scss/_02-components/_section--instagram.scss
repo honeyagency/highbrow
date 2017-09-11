@@ -1,0 +1,39 @@
+.section--instagram {
+    @include media($screen-sm) {
+        .title {
+            transform: rotate(-90deg);
+            margin-right: -15vw;
+            font-size: 0.8em;
+            left: 2vw;
+            position: relative;
+        }
+    }
+
+
+    a {
+        @include media($screen-sm) {
+            &:first-of-type {
+                margin-left: 5vw;
+            }
+
+            flex-basis: calc(100% / 6);
+            width: calc(100% / 6);
+        }
+
+
+        img {}
+    }
+
+    @include media($max-sm) {
+        .title {
+            flex-basis: 100%;
+            display: block;
+        }
+
+        a {
+            &:last-of-type {
+                display: none !important;
+            }
+        }
+    }
+}
