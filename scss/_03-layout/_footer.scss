@@ -30,4 +30,12 @@ footer {
             }
         }
     }
+
+    @include media($max-sm) {
+        top: -1em;
+        position: relative;
+        .block--social {
+            margin: 0 auto;
+        }
+    }
 }

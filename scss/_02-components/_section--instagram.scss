@@ -25,9 +25,13 @@
     }
 
     @include media($max-sm) {
+        position: relative;
+        top: -1em;
         .title {
             flex-basis: 100%;
             display: block;
+            color: $base-font-color;
+            margin-bottom: .5em;
         }
 
         a {
@@ -35,5 +39,7 @@
                 display: none !important;
             }
         }
+
+        justify-content: space-between;
     }
 }

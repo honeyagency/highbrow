@@ -20,6 +20,7 @@
 .spacing--dsk-vert-4 {@include media( $screen-sm ){padding-top:(4 * $h3);padding-bottom:(4 * $h3);};}
 .spacing--dsk-vert-5 {@include media( $screen-sm ){padding-top:(5 * $h2);padding-bottom:(5 * $h2);};}
 .spacing--dsk-vert-6 {@include media( $screen-sm ){padding-top:(6 * $h1);padding-bottom:(6 * $h1);};}
+.spacing--dsk-vert-0 {@include media( $screen-sm ){padding-top:0;padding-bottom:0;};}
 
 
 .spacing--dsk-horiz-1 {@include media( $screen-sm ){padding-left:(1 * $h6);padding-right:(1 * $h6);};}
@@ -28,6 +29,7 @@
 .spacing--dsk-horiz-4 {@include media( $screen-sm ){padding-left:(4 * $h3);padding-right:(4 * $h3);};}
 .spacing--dsk-horiz-5 {@include media( $screen-sm ){padding-left:(5 * $h2);padding-right:(5 * $h2);};}
 .spacing--dsk-horiz-6 {@include media( $screen-sm ){padding-left:(6 * $h1);padding-right:(6 * $h1);};}
+.spacing--dsk-horiz-0 {@include media( $screen-sm ){padding-left:0;padding-right:0;};}
 
 .spacing--md-horiz-1 {@include media( $screen-md ){padding-left:(1 * $h6);padding-right:(1 * $h6);};}
 
