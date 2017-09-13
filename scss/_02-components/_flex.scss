@@ -76,7 +76,11 @@
         display: none !important;
     }
 }
-
+.hidden--lg {
+    @include media($max-lg) {
+        display: none !important;
+    }
+}
 .hidden--dsk {
     @include media($screen-sm) {
         display: none !important;

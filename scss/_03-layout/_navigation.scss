@@ -70,15 +70,29 @@ nav {
                     }
                 }
 
-                @include media($max-lg) {
+                // @include media($max-lg) {
+                //     font-size: .75em;
+                // }
+
+                // @include media($max-md) {
+                //     a {
+                //         font-size: .75em;
+                //     }
+                // }
+                @include media($max-sm) {
+                    a {
+                        font-size: 1em;
+                    }
+                }
+
+
+                @include media($screen-sm) {
                     font-size: .75em;
                 }
 
 
-                @include media($max-md) {
-                    a {
-                        font-size: .75em;
-                    }
+                @include media($screen-md) {
+                    font-size: .8em;
                 }
             }
 
