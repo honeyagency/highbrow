@@ -129,6 +129,7 @@
     .block--service {
         @include media($max-sm) {
             border-top: 0;
+            font-size: .9em;
 
             &:first-of-type {
                 border-top: 1px solid;
