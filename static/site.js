@@ -1,3 +1,36 @@
+ function debounce(func, wait, immediate) {
+        var timeout;
+        return function() {
+            var context = this,
+                args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    };
+function toTop(e) {
+    var body = document.body,
+        html = document.documentElement;
+    var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    var $toTop = $('.to-top');
+    var $theWin = $(document).scrollTop();
+    if (height > 6000) {
+        if ($theWin > 3000) {
+            $toTop.addClass('showit');
+        } else {
+            $toTop.removeClass('showit');
+        }
+    }
+}
+var toTopDebounce = debounce(function(e) {
+    toTop(e);
+}, 200);
+window.addEventListener('scroll', toTopDebounce);
 jQuery(document).ready(function($) {
     var myLazyLoad = new LazyLoad({
         // example of options object -> see options section
@@ -85,4 +118,7 @@ jQuery(document).ready(function($) {
             scrollTop: service.offset().top
         }, 400);
     }
+
+   
+    toTop(e);
 });

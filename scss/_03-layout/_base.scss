@@ -42,3 +42,29 @@
         }
     }
 }
+
+.to-top {
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+    height: 40px;
+    width: 40px;
+    z-index: 9999999;
+    transform: translateY(4.5em);
+    transition: transform 0.2s $base-cubic;
+
+    i {
+        background-color: white;
+        border-radius: 100%;
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+
+        svg {}
+    }
+
+    &.showit {
+        transform: translateY(0em);
+        transition: transform 0.2s $base-cubic;
+    }
+}

@@ -5,6 +5,7 @@
 </head>
 {% endblock %}
 <body class="{{body_class}}" data-template="base.twig">
+	<a name="totop"></a>
 <header class="header bg--white flex flex--wrap justify--between text--uppercase spacing--gutter spacing--dsk-vert-1">
 	{% block header %}
 		<a class="hdr-logo-link" href="/" rel="home" title="{{site.name}}"><i class="icon-logo" data-grunticon-embed></i></a>
@@ -23,5 +24,6 @@
 		{% include 'footer.twig' %}
 	{{ function('wp_footer') }}
 {% endblock %}
+<div class="to-top"><a href="#totop"><i class="icon-up" data-grunticon-embed></i></a></div>
 </body>
 </html>
