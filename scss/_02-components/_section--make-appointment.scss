@@ -1,0 +1,56 @@
+.section--make-appointment {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 60vh;
+    z-index: 999999;
+    transform: translateY(100%) translateX(-50%);
+    transition: transform 0.3s $base-cubic;
+
+    .trigger--appointment {
+        position: fixed;
+        top: 0.5em;
+        right: 1em;
+    }
+
+    .content {
+        overflow: scroll;
+        max-height: 85%;
+    }
+
+    .contact {
+        display: none;
+    }
+}
+
+body {
+    &:after {
+        content: ' ';
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        background: transparentize(map-get($blue, main), 0.76);
+        transition: opacity 0.3s $base-cubic;
+        // position: fixed;
+        z-index: -1;
+    }
+}
+
+body {
+    &.apt-open {
+        &:after {
+            transition: opacity 0.3s $base-cubic;
+            opacity: 1;
+            z-index: 999;
+        }
+
+        overflow: hidden;
+
+        .section--make-appointment {
+            transform: translateY(-50%) translateX(-50%);
+            transition: transform 0.3s $base-cubic;
+        }
+    }
+}

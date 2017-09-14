@@ -4,7 +4,7 @@ body {
     font-size: 1.1rem;
 
     @include media($screen-sm) {
-        font-size: 1.2rem;
+        // font-size: 1.2rem;
     }
 
 
@@ -47,8 +47,8 @@ h1, h2, h3, h4, h5, h6 {
 $h1: 2.5 * $base-font-size;
 $h2: 0.8604166667 * $base-font-size;
 $h3: 0.95 * $base-font-size;
-$h4: 0.9 * $base-font-size;
-$h5: 0.875 * $base-font-size;
+$h4: 0.8 * $base-font-size;
+$h5: 0.75 * $base-font-size;
 $h6: 0.7 * $base-font-size;
 
 $default-font: "proxima-nova", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif !default;
@@ -78,17 +78,21 @@ h2 {
 h3 {
     font-size: 0.85em;
     letter-spacing: 1.6px;
+    font-family: $secondary-sans-serif;
 }
 
 h4 {
     font-size: $h4;
+    font-family: $secondary-sans-serif;
 }
 
 h5 {
     font-size: $h5;
+    font-family: $secondary-sans-serif;
 }
 
 h6 {
+    font-family: $secondary-sans-serif;
     font-size: $h6;
     letter-spacing: 1.6px;
     margin-bottom: 0.5em;
@@ -197,8 +201,13 @@ ul, ol {
 }
 
 ol {
-    list-style-position: inside !important;
+
     list-style: decimal;
+
+    li {
+        margin-left: 1.5em;
+        list-style-position: initial;
+    }
 }
 
 .center {
