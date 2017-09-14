@@ -10,8 +10,8 @@ jQuery(document).ready(function($) {
         $('body').toggleClass('openmobile');
         $('header').toggleClass('openmobile');
     });
-    $('.step--title').on('click touchstart', function(event) {
-        if ($(".hidden--mob").css("display") == "none !important") {
+    if (window.matchMedia('(max-width: 767px)').matches) {} else {
+        $('.step--title').on('click touchstart', function(event) {
             event.preventDefault();
             $id = $(this).attr('id');
             if ($(this).hasClass('active')) {
@@ -23,8 +23,8 @@ jQuery(document).ready(function($) {
                 $(this).parent().parent().find('.block--step-content.expanded').slideToggle('fast').toggleClass('expanded');
                 $(this).parent().parent().find('.block--step-content#' + $id).slideToggle('fast').toggleClass('expanded');
             }
-        }
-    });
+        });
+    }
 
     function toggleServiceDsk(e) {
         $id = e.attr('id');

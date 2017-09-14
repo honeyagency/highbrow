@@ -13,30 +13,32 @@
             }
 
             h1 {
-                position: absolute;
-
-                @include media($screen-xs) {}
-
-                @include media($screen-sm) {
-                    position: relative;
-                }
-
-
-                @include media($screen-md) {}
-
-                @include media($screen-lg) {}
-
-                @include media($screen-xl) {}
-
-
+                position: relative;
                 z-index: 3;
                 top: 50%;
                 transform: translateY(-50%);
             }
         }
-
-        .article-h1 {}
     }
 
     .section--article-content {}
+}
+
+.home {
+    .section--article-header {
+        h1 {
+            @include media($screen-sm) {
+                position: relative;
+            }
+
+
+            z-index: 3;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include media($max-sm) {
+                position: absolute !important;
+            }
+        }
+    }
 }
