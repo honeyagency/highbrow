@@ -1,4 +1,6 @@
 footer {
+    @extend .bg--blue;
+
     .block--social {
         @include media($screen-sm) {
             float: right;
@@ -34,8 +36,16 @@ footer {
     @include media($max-sm) {
         top: -1em;
         position: relative;
+
         .block--social {
             margin: 0 auto;
         }
+    }
+
+
+    .bg--bug {
+        background: url("bug.png");
+        background-repeat: repeat;
+        background-size: 72px;
     }
 }
