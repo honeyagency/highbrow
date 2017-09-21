@@ -71,3 +71,26 @@ $instagramCache = dirname(__FILE__) . '/api-cache.json';
 
 $instagramCachedResults = instagramResults($instagramCache, null);
 // print_r($instagramCachedResults);
+
+function filter_instagram_results($tags = null, $colorFilter = null)
+{
+    global $instagramCachedResults;
+    $updatedArray = array();
+
+    foreach ($instagramCachedResults as $post) {
+
+// print_r($post['tags']);
+        if ($tags != null) {
+            if (in_array($tags, $post['tags'])) {
+                // print_r($post);
+                $updatedArray[] = $post;
+
+            }
+
+        } else {
+            $updatedArray = $instagramCachedResults;
+        }
+        
+    }
+    return $updatedArray;
+}

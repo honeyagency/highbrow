@@ -1,0 +1,148 @@
+fieldset {
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    font-weight: 100;
+    padding: 0;
+}
+
+label {
+    display: block;
+    font-weight: 100;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    font-family: $default-font;
+    font-size: $base-font-size;
+    padding: 6px 9px;
+    font-size: 1.2em;
+}
+
+#{$all-text-inputs} {
+    color: map-get($blue, main);
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid map-get($blue, main);
+
+    // font-family: $san;
+    // text-transform: uppercase;
+    border-radius: 0;
+    border-color: map-get($blue, main);
+    box-shadow: none;
+    box-sizing: border-box;
+    transition: border-color .3s ease-in-out;
+    margin-bottom: 20px;
+    padding: 17px 20px;
+    font-size: 1.2em;
+
+    // &:hover {
+    //     border-color: darken(map-get($brown, main), 10%);
+    // }
+
+    &::-webkit-input-placeholder {
+        color: map-get($blue, faded);
+    }
+
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        color: map-get($blue, faded);
+    }
+
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: map-get($blue, faded);
+    }
+
+    &:-ms-input-placeholder {
+        color: map-get($blue, faded);
+    }
+
+    &:focus {
+        box-shadow: 0;
+        outline: none;
+        border-color: map-get($blue, main);
+    }
+
+    &.icon-arrow-right-gold {
+        background-size: 14px;
+        background-position: calc(100% - 25px) center;
+        max-width: 460px;
+        margin: 0 auto;
+    }
+}
+
+select {
+    background-color: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    display: inline;
+}
+
+[type="file"] {
+    width: 100%;
+}
+
+select {
+    width: 100%;
+
+    &:hover, &:active, &:focus {
+        cursor: pointer;
+        outline: none;
+    }
+}
+
+[type="submit"] {
+    border-radius: 0;
+    display: block;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+}
+
+.screenreaderonly {
+    @include hide-visually;
+}
+
+.wpcf7-submit {
+    background: transparent;
+    appearance: none;
+    padding: 0;
+    background: map-get($blue, faded);
+    color: white;
+    padding: 0.5em 1.7em;
+
+    @extend .font--semi-bold;
+
+    // @extend .color--black;
+
+    @extend .text--uppercase;
+
+    @extend .letter--1;
+
+    @extend .font--smaller;
+
+    // @extend .button--inline-pink-hover;
+}
+
+.wpcf7-form-control-wrap {
+    #{$all-text-inputs} {
+        width: 100%;
+    }
+}

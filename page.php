@@ -41,6 +41,12 @@ if (is_front_page() == true) {
 } elseif (is_page(16)) {
     $context['apts'] = prepareAppointmentsPage();
 }
-   $context['instagram'] = $instagramCachedResults;
+$instagramTag = get_field('field_59c2f8b94fa85', 'option');
+
+if ($instagramTag != null) {
+    $context['instagram'] = filter_instagram_results($instagramTag, null);
+} else {
+    $context['instagram'] = $instagramCachedResults;
+}
 
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

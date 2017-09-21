@@ -219,6 +219,7 @@ function prepareAppointmentsPage()
     $appointments = array(
         'intro'   => $intro,
         'content' => $content,
+        'contact' => get_field('field_59c2fe7aab68a'),
 
     );
 

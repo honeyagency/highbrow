@@ -19,6 +19,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_59c2f8b94fa85",
+            "label": "Instagram Tag Filter",
+            "name": "instagram_tag_filter",
+            "type": "text",
+            "instructions": "Enter the hashtag you want the instagram results in the footer to be filtered by (don't add the <code>#<\/code> sign.)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_59b6d4ce7241f",
             "label": "Facebook URL",
             "name": "facebook_url",
@@ -334,5 +353,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1505156026
+    "modified": 1505949946
 }

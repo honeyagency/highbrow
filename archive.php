@@ -34,7 +34,14 @@ if (is_day()) {
     $context['title'] = post_type_archive_title('', false);
     array_unshift($templates, 'archive-' . get_post_type() . '.twig');
 }
-$context['instagram'] = $instagramCachedResults;
+
+$tag                     = get_field('field_59c2f8b94fa85', 'option');
+if (!empty($tag)) {
+    $instaresults = filter_instagram_results($tag, null);
+} else {
+    $instaresults = $instagramCachedResults;
+}
+
 $context['posts']     = Timber::get_posts();
 
 Timber::render($templates, $context);

@@ -1,6 +1,7 @@
 {# {{instagram|print_r}} #}
 <section class="section--instagram flex flex--wrap justify--around spacing--vert-1 spacing--dsk-vert-3">
 	<span class="title color--gray-faded font--bold before text--uppercase">{{options.footer.instagram_section_text}}</span>
+	
 	{% for image in instagram %}
 		{% if loop.index < 6 %}
 		<a href="{{image.link}}" title="{{image.caption.text}}" target="_blank" class="grid--half">
