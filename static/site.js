@@ -120,15 +120,15 @@
          }, 400);
      }
 
-     function toggleAppointmentAgreement(e) {}
-     $('.trigger--appointment').on('click touchstart', function(e) {
-         event.preventDefault();
-         wrap = $('.section--make-appointment');
-         $('body').toggleClass('apt-open');
-         $('.accept').on('click touchstart', function(event) {
-             event.preventDefault();
-             wrap.find('.content').slideToggle(400);
-             wrap.find('.contact').slideToggle(400);
-         });
-     });
+     // function toggleAppointmentAgreement(e) {}
+     // $('.trigger--appointment').on('click touchstart', function(e) {
+     //     event.preventDefault();
+     //     wrap = $('.section--make-appointment');
+     //     $('body').toggleClass('apt-open');
+     //     $('.accept').on('click touchstart', function(event) {
+     //         event.preventDefault();
+     //         wrap.find('.content').slideToggle(400);
+     //         wrap.find('.contact').slideToggle(400);
+     //     });
+     // });
  });
