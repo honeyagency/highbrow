@@ -1,4 +1,4 @@
-<section class="section--home-meet spacing--gutter-dsk">
+<section class="section--home-meet spacing--gutter-dsk dsk--flex justify--end">
 	<img src="{{home.meet.image|resize(1280)}}" alt="{{home.meet.image.caption}}" class="grid--one" srcset="{{home.meet.image|resize(640)}}  640w,{{home.meet.image|resize(750)}}  750w,{{home.meet.image|resize(1080)}} 1080w,{{home.meet.image|resize(1280)}} 1280w,{{home.meet.image|resize(1366)}} 1366w,{{home.meet.image|resize(1440)}} 1440w,{{home.meet.image|resize(1920)}} 1920w" sizes="100vw">
 	<div class="bg--white block--content grid--sm-half grid--md-two-fifths spacing--gutter-mob spacing--vert-2 spacing--dsk-vert-4 spacing--dsk-horiz-3">
 		{% if home.meet.small_text %} <h2 class="deco color--orange"><span>{{home.meet.small_text}}</span><span>{{home.meet.large_text}}</span></h2>{% endif %}
