@@ -1,5 +1,5 @@
 <style type="text/css" media="screen">li{ padding-left: 20px;}.docitem{margin-bottom: 10px;}</style>
-<div class="docitem"><a href="<?php echo site_url(); ?>/wp-content/themes/highbrow/library/docs/#stanger-projects-wordpress-documentation">Stanger Projects Wordpress Documentation</a></div>
+<div class="docitem"><a href="<?php echo site_url(); ?>/wp-content/themes/highbrow/library/docs/#highbrow-wordpress-documentation">Highbrow Wordpress Documentation</a></div>
 <div class="docitem"><a href="<?php echo site_url(); ?>/wp-content/themes/highbrow/library/docs/#wordpress-overview">WordPress Overview</a></div>
 <div class="docitem"><a href="<?php echo site_url(); ?>/wp-content/themes/highbrow/library/docs/#logging-in">Logging In</a></div>
 <div class="docitem"><a href="<?php echo site_url(); ?>/wp-content/themes/highbrow/library/docs/#media-library">Media Library</a></div>
