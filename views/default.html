@@ -1,0 +1,21 @@
+---
+layout: compress
+---
+{% include html-header.html %}
+</head>
+<body>
+{% include header.html %}
+<main role="main">
+	<section class="flex flex--wrap">
+		<div class="grid--one grid--md-three-fifths grid--lg-half nog bg--green-light spacing--vert-2 spacing--horiz-2 spacing--dsk-vert-5  spacing--dsk-horiz-5"><h2 class="color--green-dark margin--bot-1">{{site.content.title}}</h2>
+			<h3 class="color--green-dark">{{site.contact.title}}<br><span class="color--green-dark">{{site.contact.phone}}</span></h3>
+		</div>
+		<div class="grid--one grid--md-two-fifths grid--lg-half nog section--background-image" style="background-image:url('{{site.content.background}}')"></div>
+	</section>
+</main>
+{% include footer.html %}
+</body>
+<link rel="stylesheet" href="{{ "/app/main.min.css" | prepend: site.baseurl }}">
+<script src="{{ "/app/app.min.js" | prepend: site.baseurl }} type="text/javascript" charset="utf-8" async defer></script>
+{% include analytics.html %}
+</html>
